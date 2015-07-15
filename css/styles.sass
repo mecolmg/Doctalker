@@ -1,0 +1,100 @@
+// colors
+$white: #fff
+$red: #FC1818
+$blue: #0A4383
+$muted: #777
+// urls
+$url_0: url('../images/doctor.jpg')
+
+html
+	width: 100%
+	height: 100%
+
+body 
+	@extend html
+	font-family: 'Open Sans','Helvetica Neue', Arial, sans-serif
+	font-size: 16px
+	text-align: center
+	background-image: $url_0
+	background-attachment: fixed
+	background-position: absolute
+	background-size: cover
+	color: $white
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+
+hr
+	max-width: 50px
+	border-top: $white solid 2px
+
+header 
+	position: relative
+	width: 100%
+	// height: 80%
+	text-align: center
+p 
+	font-family: Merriweather,'Helvetica Neue',Arial,sans-serif
+
+.red
+	color: $red
+	border-color: $red
+.blue
+	color: $blue
+	border-color: $blue
+.white
+	color: $white
+	border-color: $white
+.muted
+	color: $muted
+	border-color: $muted
+.header-content 
+	position: relative
+	width: 100%
+	padding: 100px 15px
+	padding-bottom: 20px
+	text-align: center
+	background: rgba(255,255,255,0.6)
+	
+	h1
+		font-weight: 700
+		font-size: 35px
+		text-transform: uppercase
+	p
+		color: rgb(77, 77, 77)
+		font-size: 20px
+		margin: 0
+		padding-top: 20px
+
+.page
+	article
+		margin: 40px
+	h2
+		font-weight: bold
+	&#what
+		background: $blue
+		padding: 40px 0
+	&#benefits
+		background: $white
+		padding: 40px 0
+		color: $red
+
+.row > div
+	padding-bottom: 15px
+
+// Responsive Settings:
+@media(min-width: 767px) 
+	header
+		min-height: 100%
+	.header-content
+		position: absolute
+		top: 40%
+		padding: 30px 15px
+		padding-bottom: 10px
+		top: 50%
+		transform: translateY(-50%)
+		h1
+			font-size: 65px
+	.container#nav
+		width: 100%
+		padding-left: 0
