@@ -6,12 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src='js/smooth.js'></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="js/popup.js"></script>
 </head>
 <body>
 	<div class="navbar navbar-default navbar-fixed-top">
@@ -142,35 +144,35 @@
 		<h2>Videos</h2>
 		<hr class='white'>
 		<div class='container'>
-			<div class='row no-gutter'>
-				<div class='col-lg-6 col-sm-6 no-spacing text-center'>
+			<div class='gallery row no-gutter'>
+				<div class='video col-lg-6 col-sm-6 no-spacing text-center'>
 					<div class="videoWrapper">
-						<iframe type="text/html" src="https://www.youtube.com/embed/0r5VuKvstns?modestbranding=0&fs=1&rel=0&theme=light&controls=0&showinfo=0" frameborder="0" rel="0" theme="light"></iframe>
+						<iframe type="text/html" src="https://www.youtube.com/embed/0r5VuKvstns?modestbranding=0&fs=1&rel=0&theme=light&showinfo=0" frameborder="0" rel="0" theme="light"></iframe>
 						<div class="videoTitle">
 							<h1>Welcome To DocTalker</h1>
 						</div>
 					</div>
 
 				</div>
-				<div class='col-lg-6 col-sm-6 no-spacing text-center'>
+				<div class='video col-lg-6 col-sm-6 no-spacing text-center'>
 					<div class="videoWrapper">
-						<iframe type="text/html" src="https://www.youtube.com/embed/Fgwc6vRwe_8?modestbranding=0&fs=1&rel=0&theme=light&controls=0&showinfo=0" frameborder="0"></iframe>
+						<iframe type="text/html" src="https://www.youtube.com/embed/Fgwc6vRwe_8?modestbranding=0&fs=1&rel=0&theme=light&showinfo=0" frameborder="0"></iframe>
 						<div class="videoTitle">
 							<h1>Healthcare The Way It Should Be!</h1>
 						</div>
 					</div>
 				</div>
-				<div class='col-lg-6 col-sm-6 no-spacing text-center'>
+				<div class='video col-lg-6 col-sm-6 no-spacing text-center'>
 					<div class="videoWrapper">
-						<iframe type="text/html" src="https://www.youtube.com/embed/EN_TBeKlyG0?modestbranding=0&fs=1&rel=0&theme=light&controls=0&showinfo=0" frameborder="0"></iframe>
+						<iframe type="text/html" src="https://www.youtube.com/embed/EN_TBeKlyG0?modestbranding=0&fs=1&rel=0&theme=light&showinfo=0" frameborder="0"></iframe>
 						<div class="videoTitle">
 							<h1>Doctalker Testimonials</h1>
 						</div>
 					</div>
 				</div>
-				<div class='col-lg-6 col-sm-6 no-spacing text-center'>
+				<div class='video col-lg-6 col-sm-6 no-spacing text-center'>
 					<div class="videoWrapper">
-						<iframe type="text/html" src="https://www.youtube.com/embed/WmEtMjAVbos?modestbranding=0&fs=1&rel=0&theme=light&controls=0&showinfo=0" frameborder="0"></iframe>
+						<iframe type="text/html" src="https://www.youtube.com/embed/WmEtMjAVbos?modestbranding=0&fs=1&rel=0&theme=light&showinfo=0" frameborder="0"></iframe>
 						<div class="videoTitle">
 							<h1>Doctalker Family Medicine</h1>
 						</div>
@@ -254,6 +256,17 @@
 		            infowindow.open(map, marker);
 		        });
 		        infowindow.open(map, marker);
+		});
+	</script>
+	<script type="text/javascript">
+		$('.gallery').each(function() { // the containers for all your galleries
+		    $(this).magnificPopup({
+		        delegate: 'a', // the selector for gallery item
+		        type: 'iframe',
+		        gallery: {
+		          enabled:true
+		        }
+		    });
 		});
 	</script>
 </body>
